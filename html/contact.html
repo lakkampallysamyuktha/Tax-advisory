@@ -20,7 +20,10 @@
 </head>
 
 <body>
-    <div class="site-loader"><span class="site-loader__text">Stackly</span></div>
+    <div class="site-loader">
+        <div class="site-loader__spinner-wrap"><div class="site-loader__spinner"></div></div>
+        <span class="site-loader__text">Stackly</span>
+    </div>
 
     <a class="skip-link" href="#main">Skip to content</a>
 
@@ -257,7 +260,7 @@
                                 <em>Required</em>
                             </label>
                             <input type="tel" id="enqPhone" name="phone" autocomplete="tel"
-                                placeholder="+91 98765 43210">
+                                placeholder="9876543210" pattern="[0-9]{10}" minlength="10" maxlength="10" title="Mobile number must be exactly 10 digits" required>
                             <span class="enq-field__err" id="enqPhoneErr"></span>
                         </div>
 

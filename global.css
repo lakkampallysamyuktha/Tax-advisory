@@ -870,10 +870,30 @@ time {
     background: var(--paper);
     z-index: 9999;
     display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
     align-items: center;
     justify-content: center;
     pointer-events: none;
     animation: loaderFadeOut 1.5s var(--ease-out) forwards;
+}
+
+.site-loader__spinner-wrap {
+    animation: loaderTextAnim 1.5s var(--ease-out) forwards;
+}
+
+.site-loader__spinner {
+    width: 32px;
+    height: 32px;
+    border: 3px solid rgba(1, 7, 56, 0.1);
+    border-top: 3px solid var(--navy-800);
+    border-radius: 50%;
+    animation: loaderSpin 1s linear infinite;
+}
+
+@keyframes loaderSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 .site-loader__text {
