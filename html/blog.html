@@ -185,8 +185,15 @@
                 </div>
             </div>
 
-            <div class="shell">
-                <div class="bl-cats__rail slide slide-up" style="--i:2" tabindex="0"
+            <div class="shell" style="position: relative;">
+                <button class="bl-cats__scroll-btn bl-cats__scroll-btn--prev slide slide-up" style="--i:2" aria-label="Scroll left">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                <button class="bl-cats__scroll-btn bl-cats__scroll-btn--next slide slide-up" style="--i:2" aria-label="Scroll right">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+
+                <div class="bl-cats__rail slide slide-up" id="catsRail" style="--i:2" tabindex="0"
                     aria-label="Journal categories, scrollable">
 
                     <a href="../404.html" class="cat is-active" data-cat="all">
@@ -215,6 +222,41 @@
                     </a>
                 </div>
             </div>
+            
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const rail = document.getElementById('catsRail');
+                    const prevBtn = document.querySelector('.bl-cats__scroll-btn--prev');
+                    const nextBtn = document.querySelector('.bl-cats__scroll-btn--next');
+
+                    if (rail && prevBtn && nextBtn) {
+                        const scrollAmount = 300;
+                        
+                        prevBtn.addEventListener('click', () => {
+                            rail.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                        });
+                        
+                        nextBtn.addEventListener('click', () => {
+                            rail.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                        });
+                        
+                        // Optional: Hide buttons if not scrollable or at ends
+                        const checkScroll = () => {
+                            prevBtn.style.opacity = rail.scrollLeft <= 0 ? '0.5' : '1';
+                            prevBtn.style.pointerEvents = rail.scrollLeft <= 0 ? 'none' : 'all';
+                            
+                            const maxScroll = rail.scrollWidth - rail.clientWidth;
+                            nextBtn.style.opacity = rail.scrollLeft >= maxScroll - 1 ? '0.5' : '1';
+                            nextBtn.style.pointerEvents = rail.scrollLeft >= maxScroll - 1 ? 'none' : 'all';
+                        };
+                        
+                        rail.addEventListener('scroll', checkScroll);
+                        window.addEventListener('resize', checkScroll);
+                        // Initial check slightly delayed to ensure layout
+                        setTimeout(checkScroll, 100);
+                    }
+                });
+            </script>
         </section>
 
         <!-- ========================== LATEST NOTES ========================= -->

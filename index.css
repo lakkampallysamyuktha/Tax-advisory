@@ -788,6 +788,45 @@
     display: none;
 }
 
+.spec__scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    color: var(--ink-900);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color .3s, opacity .3s, color .3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.spec__scroll-btn:hover {
+    background: var(--navy-800);
+    color: var(--paper);
+    border-color: var(--navy-800);
+}
+
+.spec__scroll-btn--prev {
+    left: -24px;
+}
+
+.spec__scroll-btn--next {
+    right: -24px;
+}
+
+@media screen and (max-width: 768px) {
+    .spec__scroll-btn {
+        display: none;
+    }
+}
+
 .spec__card {
     flex: 0 0 clamp(280px, 30%, 380px);
     scroll-snap-align: start;

@@ -633,8 +633,15 @@
                 </header>
             </div>
 
-            <div class="shell">
-                <div class="spec__rail slide slide-up" style="--i:3" tabindex="0"
+            <div class="shell" style="position: relative;">
+                <button class="spec__scroll-btn spec__scroll-btn--prev slide slide-up" style="--i:3" aria-label="Scroll left">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                <button class="spec__scroll-btn spec__scroll-btn--next slide slide-up" style="--i:3" aria-label="Scroll right">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+
+                <div class="spec__rail slide slide-up" id="specRail" style="--i:3" tabindex="0"
                     aria-label="Specialisations, scrollable">
 
                     <article class="spec__card">
@@ -684,6 +691,39 @@
                 </div>
 
                 <p class="spec__hint mono">Scroll horizontally to review all desks</p>
+                
+                <script>
+                    document.addEventListener('DOMContentLoaded', () => {
+                        const rail = document.getElementById('specRail');
+                        const prevBtn = document.querySelector('.spec__scroll-btn--prev');
+                        const nextBtn = document.querySelector('.spec__scroll-btn--next');
+
+                        if (rail && prevBtn && nextBtn) {
+                            const scrollAmount = 400; // slightly more for bigger cards
+                            
+                            prevBtn.addEventListener('click', () => {
+                                rail.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                            });
+                            
+                            nextBtn.addEventListener('click', () => {
+                                rail.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                            });
+                            
+                            const checkScroll = () => {
+                                prevBtn.style.opacity = rail.scrollLeft <= 0 ? '0.5' : '1';
+                                prevBtn.style.pointerEvents = rail.scrollLeft <= 0 ? 'none' : 'all';
+                                
+                                const maxScroll = rail.scrollWidth - rail.clientWidth;
+                                nextBtn.style.opacity = rail.scrollLeft >= maxScroll - 1 ? '0.5' : '1';
+                                nextBtn.style.pointerEvents = rail.scrollLeft >= maxScroll - 1 ? 'none' : 'all';
+                            };
+                            
+                            rail.addEventListener('scroll', checkScroll);
+                            window.addEventListener('resize', checkScroll);
+                            setTimeout(checkScroll, 100);
+                        }
+                    });
+                </script>
             </div>
         </section>
 
