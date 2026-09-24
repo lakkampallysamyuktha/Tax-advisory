@@ -236,7 +236,7 @@
                     var e = f.querySelector(".auth-field__err");
                     if (e) { e.textContent = ""; e.classList.remove("is-visible"); }
                 });
-                if (alertEl) { alertEl.textContent = ""; alertEl.classList.remove("is-visible"); }
+                if (alertEl) { alertEl.textContent = ""; alertEl.classList.remove("is-visible", "is-success"); }
             }
 
             function isValidEmail(v) {
@@ -366,7 +366,7 @@
                 if (!el) return;
                 el.addEventListener("input", function () {
                     clearError(el.name);
-                    if (alertEl) { alertEl.textContent = ""; alertEl.classList.remove("is-visible"); }
+                    if (alertEl) { alertEl.textContent = ""; alertEl.classList.remove("is-visible", "is-success"); }
                 });
             });
 
@@ -396,9 +396,20 @@
                     if (!ok) {
                         if (alertEl) {
                             alertEl.textContent = "Please correct the highlighted fields";
+                            alertEl.classList.remove("is-success");
                             alertEl.classList.add("is-visible");
                         }
                         return;
+                    }
+
+                    if (alertEl) {
+                        alertEl.textContent = "Signing in... Redirecting";
+                        alertEl.classList.add("is-success", "is-visible");
+                    }
+                    var submitBtn = form.querySelector('.auth-submit');
+                    if (submitBtn) {
+                        submitBtn.innerHTML = 'Signing in... <i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i>';
+                        submitBtn.disabled = true;
                     }
 
                     /* Demonstration sign-in — store identity, then role-based redirect. */
@@ -407,11 +418,13 @@
                         localStorage.setItem("stackly_user_role", role);
                     } catch (err) { /* storage may be unavailable */ }
 
-                    if (role === "admin") {
-                        window.location.href = "admin.html";
-                    } else {
-                        window.location.href = "user.html";
-                    }
+                    setTimeout(function() {
+                        if (role === "admin") {
+                            window.location.href = "admin.html";
+                        } else {
+                            window.location.href = "user.html";
+                        }
+                    }, 1200);
                 });
             }
 
@@ -427,6 +440,11 @@
                     clearAllErrors();
                     setRole("user", "Client");
                     closeRole();
+                    var submitBtn = form.querySelector('.auth-submit');
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = 'Sign in <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>';
+                    }
                 }
             });
 

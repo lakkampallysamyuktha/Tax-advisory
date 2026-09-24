@@ -273,7 +273,7 @@
                 });
                 var t = document.getElementById("termsErr");
                 if (t) { t.textContent = ""; t.classList.remove("is-visible"); }
-                if (alertEl) { alertEl.textContent = ""; alertEl.classList.remove("is-visible"); }
+                if (alertEl) { alertEl.textContent = ""; alertEl.classList.remove("is-visible", "is-success"); }
             }
 
             function isValidEmail(v) {
@@ -436,7 +436,7 @@
                 if (!el) return;
                 el.addEventListener("input", function () {
                     clearError(el.name);
-                    if (alertEl) { alertEl.textContent = ""; alertEl.classList.remove("is-visible"); }
+                    if (alertEl) { alertEl.textContent = ""; alertEl.classList.remove("is-visible", "is-success"); }
                 });
             });
 
@@ -492,18 +492,31 @@
                     if (!ok) {
                         if (alertEl) {
                             alertEl.textContent = "Please correct the highlighted fields";
+                            alertEl.classList.remove("is-success");
                             alertEl.classList.add("is-visible");
                         }
                         return;
                     }
 
-                    /* Demonstration signup — do NOT persist anything. */
-                    form.reset();
-                    clearAllErrors();
-                    setRole("user", "Client");
-                    closeRole();
+                    if (alertEl) {
+                        alertEl.textContent = "Creating account... Redirecting to login";
+                        alertEl.classList.add("is-success", "is-visible");
+                    }
+                    var submitBtn = form.querySelector('.auth-submit');
+                    if (submitBtn) {
+                        submitBtn.innerHTML = 'Creating account... <i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i>';
+                        submitBtn.disabled = true;
+                    }
 
-                    window.location.href = "login.html";
+                    /* Demonstration signup — do NOT persist anything. */
+                    setTimeout(function() {
+                        form.reset();
+                        clearAllErrors();
+                        setRole("user", "Client");
+                        closeRole();
+
+                        window.location.href = "login.html";
+                    }, 1200);
                 });
             }
 
@@ -522,6 +535,11 @@
                     if (pwdHint) {
                         pwdHint.classList.remove("is-ok", "is-weak");
                         pwdHint.textContent = "Use 8 or more characters with a mix of letters and numbers.";
+                    }
+                    var submitBtn = form.querySelector('.auth-submit');
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = 'Create account <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>';
                     }
                 }
             });

@@ -320,6 +320,7 @@
     background: var(--paper);
     display: flex;
     flex-direction: column;
+    cursor: pointer;
     transition: background-color .45s var(--ease-out);
 }
 
@@ -406,6 +407,10 @@
     background: var(--ink-900);
     color: var(--paper);
     padding-block: clamp(4rem, 8vw, 7rem);
+}
+
+.bl-most h2 {
+    color: var(--paper);
 }
 
 .bl-most .eyebrow {

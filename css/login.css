@@ -765,6 +765,12 @@ html, body {
     display: block;
 }
 
+.auth-alert.is-success {
+    color: var(--navy-600);
+    border-color: var(--navy-600);
+    background: rgba(34, 57, 111, 0.05);
+}
+
 /* --------------------------- FOOT NOTE ---------------------------- */
 .auth__foot {
     margin-top: .35rem;

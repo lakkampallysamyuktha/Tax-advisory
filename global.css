@@ -653,7 +653,7 @@ time {
 
 .footer__brand p {
     margin-top: 1.25rem;
-    color: var(--navy-200);
+    color: var(--paper);
     font-size: .9375rem;
     max-width: 34ch;
 }
