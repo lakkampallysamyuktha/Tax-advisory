@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stackly — Tax Advisory &amp; Financial Compliance</title>
+    <meta name="description"
+        content="Stackly is a tax advisory and financial compliance practice: direct tax, GST, audit, structuring and regulatory filings, delivered with ledger discipline.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="index.css">
+    <script>document.documentElement.classList.add('js-ready');</script>
+</head>
+
+<body>
+    <div class="site-loader"><span class="site-loader__text">Stackly</span></div>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- ============================ HEADER ============================ -->
+    <header class="site-header">
+        <div class="shell header__inner">
+            <a class="brand" href="index.html" aria-label="Stackly Tax Advisory — home">
+                <img src="logo.webp" alt="">
+               
+            </a>
+
+            <nav class="nav" aria-label="Primary">
+                <ul>
+                    <li><a href="index.html" class="is-active">Home</a></li>
+                    <li><a href="html/about.html">About</a></li>
+                    <li><a href="html/services.html">Services</a></li>
+                    <li><a href="html/blog.html">Blog</a></li>
+                    <li><a href="html/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <a class="btn btn--outline btn--sm header__login" href="html/login.html">Login</a>
+                <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false"
+                    aria-controls="menuOverlay">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ======================= MOBILE MENU OVERLAY ===================== -->
+    <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+        <div class="menu-overlay__top">
+            <a class="brand on-dark" href="index.html" aria-label="Stackly Tax Advisory — home">
+                <img src="logo.webp" alt="">
+                
+            </a>
+            <button class="menu-close" id="menuClose" aria-label="Close menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <nav class="menu-overlay__nav" aria-label="Mobile">
+            <a href="index.html" style="--i:0">Home</a>
+            <a href="html/about.html" style="--i:1">About</a>
+            <a href="html/services.html" style="--i:2">Services</a>
+            <a href="html/blog.html" style="--i:3">Blog</a>
+            <a href="html/contact.html" style="--i:4">Contact</a>
+            <a href="html/login.html" class="menu-overlay__login" style="--i:5">
+                Login <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </nav>
+
+        <p class="menu-overlay__foot">Stackly · Salem, Tamil Nadu, India</p>
+    </div>
+
+    <main id="main">
+
+        <!-- ============================== HERO ============================== -->
+        <section class="hero">
+            <div class="hero__grid">
+
+                <div class="hero__copy">
+                    <p class="eyebrow slide slide-up" style="--i:0">Tax Advisory &amp; Financial Compliance</p>
+
+                    <h1 class="hero__title">
+                        <span class="slide slide-up" style="--i:1">Precision in every filing.</span>
+                        <span class="slide slide-up" style="--i:2"><em>Clarity</em> in every decision.</span>
+                    </h1>
+
+                    <p class="hero__lede slide slide-up" style="--i:3">
+                        We keep the register, the calendar and the argument. Position, provision,
+                        documentation and defence — held to the same standard, year after year.
+                    </p>
+
+                    <div class="hero__actions slide slide-up" style="--i:4">
+                        <a class="btn btn--solid" href="html/contact.html">Request a Consultation</a>
+                        <a class="btn btn--outline" href="html/about.html">Meet the Practice</a>
+                    </div>
+
+                    <dl class="hero__rail slide slide-up" style="--i:5">
+                        <div>
+                            <dt>Advisory Desk</dt>
+                            <dd>Mon – Sat · 09:30 – 18:30 IST</dd>
+                        </div>
+                        <div>
+                            <dt>Practice Reference</dt>
+                            <dd class="mono">STK/ADV/2026</dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <div class="hero__media slide slide-right" style="--i:1">
+                    <div class="hero__slides" id="heroSlides">
+                        <figure class="hero__slide is-active">
+                            <img src="assets/photo_149736675403_1.webp"
+                                alt="Advisory office interior with daylight across a long work table">
+                        </figure>
+                        <figure class="hero__slide">
+                            <img src="assets/photo_152475863162_1.webp"
+                                alt="Advisors reviewing printed schedules and handwritten notes around a table">
+                        </figure>
+                        <figure class="hero__slide">
+                            <img src="assets/photo_1554224155-6.webp"
+                                alt="Close view of a ledger sheet, pen and calculator on a desk">
+                        </figure>
+                        <figure class="hero__slide">
+                            <img src="assets/photo_148640614692.webp"
+                                alt="Institutional building facade photographed at a steep angle">
+                        </figure>
+                    </div>
+
+                    <div class="hero__media-foot">
+                        <div class="hero__dots" id="heroDots" role="tablist" aria-label="Hero images">
+                            <button class="hero__dot is-active" role="tab" aria-selected="true"
+                                aria-label="Show image one"></button>
+                            <button class="hero__dot" role="tab" aria-selected="false"
+                                aria-label="Show image two"></button>
+                            <button class="hero__dot" role="tab" aria-selected="false"
+                                aria-label="Show image three"></button>
+                            <button class="hero__dot" role="tab" aria-selected="false"
+                                aria-label="Show image four"></button>
+                        </div>
+                        <span class="hero__counter mono" id="heroCounter">01 / 04</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================== TRUST STRIP ========================== -->
+        <section class="strip" aria-label="Practice disciplines">
+            <div class="marquee">
+                <div class="marquee__track">
+                    <div class="marquee__group">
+                        <span>Direct Tax</span><i class="fa-solid fa-scale-balanced"></i>
+                        <span>GST &amp; Indirect Tax</span><i class="fa-solid fa-file-invoice"></i>
+                        <span>Transfer Pricing</span><i class="fa-solid fa-chart-line"></i>
+                        <span>Audit &amp; Assurance</span><i class="fa-solid fa-scale-balanced"></i>
+                        <span>Corporate Structuring</span><i class="fa-solid fa-file-invoice"></i>
+                        <span>Regulatory Filings</span><i class="fa-solid fa-chart-line"></i>
+                        <span>Tax Litigation</span><i class="fa-solid fa-scale-balanced"></i>
+                        <span>Financial Reporting</span><i class="fa-solid fa-file-invoice"></i>
+                    </div>
+                    <div class="marquee__group" aria-hidden="true">
+                        <span>Direct Tax</span><i class="fa-solid fa-scale-balanced"></i>
+                        <span>GST &amp; Indirect Tax</span><i class="fa-solid fa-file-invoice"></i>
+                        <span>Transfer Pricing</span><i class="fa-solid fa-chart-line"></i>
+                        <span>Audit &amp; Assurance</span><i class="fa-solid fa-scale-balanced"></i>
+                        <span>Corporate Structuring</span><i class="fa-solid fa-file-invoice"></i>
+                        <span>Regulatory Filings</span><i class="fa-solid fa-chart-line"></i>
+                        <span>Tax Litigation</span><i class="fa-solid fa-scale-balanced"></i>
+                        <span>Financial Reporting</span><i class="fa-solid fa-file-invoice"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= FIRM INTRODUCTION ======================= -->
+        <section class="section firm">
+            <div class="shell firm__grid">
+
+                <div class="firm__media slide slide-left">
+                    <figure class="frame">
+                        <img src="assets/photo_149721572810_1.webp"
+                            alt="Quiet open-plan advisory office with rows of desks and document trays">
+                    </figure>
+                    <p class="frame__caption mono">Practice floor — Salem, Tamil Nadu</p>
+                </div>
+
+                <div class="firm__body">
+                    <p class="eyebrow slide slide-up">The Practice</p>
+
+                    <h2 class="h-display slide slide-up" style="--i:1">
+                        A register is only useful<br>if it is kept honestly.
+                    </h2>
+
+                    <p class="lede slide slide-up" style="--i:2">
+                        Stackly was built around a single working idea: that tax advice is a
+                        documentary discipline before it is a persuasive one. Positions are
+                        recorded. Assumptions are written down. Deadlines are owned by name.
+                    </p>
+
+                    <p class="slide slide-up" style="--i:3">
+                        We work with individuals, closely held businesses and finance teams who
+                        need their filings to hold up under review — not merely to be submitted
+                        on time. Every engagement begins with the same question: what will this
+                        look like to someone reading it cold, three years from now?
+                    </p>
+
+                    <ul class="firm__points">
+                        <li class="slide slide-up" style="--i:4">
+                            <i class="fa-solid fa-file-invoice"></i>
+                            <div>
+                                <h3>Documented positions</h3>
+                                <p>Every conclusion carries its reasoning, its authority and its date.</p>
+                            </div>
+                        </li>
+                        <li class="slide slide-up" style="--i:5">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                            <div>
+                                <h3>Audit-ready by default</h3>
+                                <p>Working papers are assembled as the work happens, not before a notice arrives.</p>
+                            </div>
+                        </li>
+                        <li class="slide slide-up" style="--i:6">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <div>
+                                <h3>Long-horizon planning</h3>
+                                <p>Structures are tested across cycles, not against a single year's rate.</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <a class="link-arrow slide slide-up" style="--i:7" href="404.html">
+                        Read the practice note <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===================== ADVISORY PRACTICE AREAS =================== -->
+        <section class="section areas">
+            <div class="shell">
+                <header class="sec-head">
+                    <p class="eyebrow slide slide-up">Advisory Practice Areas</p>
+                    <h2 class="h-display slide slide-up" style="--i:1">Where the work actually sits.</h2>
+                    <p class="sec-head__note slide slide-up" style="--i:2">
+                        Five desks, one register. Engagements are usually a combination rather
+                        than a single line item.
+                    </p>
+                </header>
+
+                <div class="areas__grid">
+
+                    <article class="area area--lead slide slide-left">
+                        <figure class="area__img">
+                            <img src="assets/photo_1554224154-2_2.webp"
+                                alt="Printed financial schedules spread across a desk beside a pen">
+                        </figure>
+                        <div class="area__body">
+                            <span class="area__tag mono">Direct Tax</span>
+                            <h3>Income tax position, computation &amp; representation</h3>
+                            <p>
+                                Return preparation, advance tax calibration, assessment responses and
+                                appellate representation — built on a single reconciled computation
+                                that stays consistent from filing to hearing.
+                            </p>
+                            <a class="link-arrow" href="404.html">
+                                Open the desk <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="area slide slide-up" style="--i:1">
+                        <span class="area__num mono">GST</span>
+                        <h3>Goods &amp; Services Tax</h3>
+                        <p>Registration, reconciliation, refunds, classification reviews and departmental replies.</p>
+                        <a class="link-arrow" href="404.html">Read the brief <i class="fa-solid fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="area slide slide-up" style="--i:2">
+                        <span class="area__num mono">Audit</span>
+                        <h3>Audit &amp; Assurance</h3>
+                        <p>Statutory, internal and tax audits with a working-paper standard that survives scrutiny.</p>
+                        <a class="link-arrow" href="404.html">Read the brief <i class="fa-solid fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="area slide slide-up" style="--i:3">
+                        <span class="area__num mono">Structuring</span>
+                        <h3>Planning &amp; Structuring</h3>
+                        <p>Entity choice, holding structures, succession and transaction sequencing.</p>
+                        <a class="link-arrow" href="404.html">Read the brief <i class="fa-solid fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="area slide slide-up" style="--i:4">
+                        <span class="area__num mono">Regulatory</span>
+                        <h3>Regulatory &amp; Compliance</h3>
+                        <p>Filing calendars, ROC obligations, TDS cycles and cross-border reporting.</p>
+                        <a class="link-arrow" href="404.html">Read the brief <i class="fa-solid fa-arrow-right"></i></a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================== FEATURED ADVISORY ====================== -->
+        <section class="section featured">
+            <div class="shell featured__grid">
+
+                <div class="featured__media slide slide-left">
+                    <figure class="frame frame--tall">
+                        <img src="assets/photo_145010149916.webp"
+                            alt="Hand annotating a printed financial statement with a pen">
+                    </figure>
+                </div>
+
+                <div class="featured__body">
+                    <p class="eyebrow slide slide-up">Featured Engagement</p>
+
+                    <h2 class="h-section slide slide-up" style="--i:1">
+                        A restated computation that held together under review.
+                    </h2>
+
+                    <p class="lede slide slide-up" style="--i:2">
+                        A closely held manufacturing group arrived with three years of filings
+                        prepared across two different systems. The numbers agreed at the top
+                        line and disagreed everywhere below it.
+                    </p>
+
+                    <p class="slide slide-up" style="--i:3">
+                        We rebuilt the computation from the trial balance upward, indexed every
+                        adjustment to a source document, and produced a reconciliation narrative
+                        that a reviewing officer could follow without a call. The engagement was
+                        not about winning an argument. It was about removing the need for one.
+                    </p>
+
+                    <dl class="featured__meta slide slide-up" style="--i:4">
+                        <div>
+                            <dt>Scope</dt>
+                            <dd>Recomputation &amp; documentation</dd>
+                        </div>
+                        <div>
+                            <dt>Duration</dt>
+                            <dd>Eleven weeks</dd>
+                        </div>
+                        <div>
+                            <dt>Desk</dt>
+                            <dd>Direct Tax</dd>
+                        </div>
+                    </dl>
+
+                    <p class="note slide slide-up" style="--i:5">
+                        Illustrative example. Not a client result.
+                    </p>
+
+                    <a class="link-arrow slide slide-up" style="--i:6" href="404.html">
+                        Read the case note <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ====================== COMPLIANCE CALENDAR ====================== -->
+        <section class="section calendar">
+            <div class="shell">
+                <div class="calendar__grid">
+
+                    <div class="calendar__left">
+                        <header class="sec-head">
+                            <p class="eyebrow slide slide-up">Compliance Calendar</p>
+                            <h2 class="h-display slide slide-up" style="--i:1">The year, as a schedule.</h2>
+                            <p class="sec-head__note slide slide-up" style="--i:2">
+                                Filing obligations grouped by cycle. Dates shown are indicative and are
+                                reviewed against the applicable statute for each engagement.
+                            </p>
+                        </header>
+
+                        <div class="calendar__tabs slide slide-left" role="tablist" aria-label="Compliance cycles">
+                            <button class="calendar__tab is-active" role="tab" aria-selected="true"
+                                data-tab="cycle-monthly">
+                                Monthly <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                            <button class="calendar__tab" role="tab" aria-selected="false" data-tab="cycle-quarterly">
+                                Quarterly <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                            <button class="calendar__tab" role="tab" aria-selected="false" data-tab="cycle-annual">
+                                Annual <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                            <button class="calendar__tab" role="tab" aria-selected="false" data-tab="cycle-event">
+                                Event-driven <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="calendar__panels slide slide-right" style="--i:1">
+
+                        <div class="calendar__panel is-active" id="cycle-monthly" role="tabpanel">
+                            <h3>Monthly cycle</h3>
+                            <p>Withholding, indirect tax returns and ledger reconciliation — the rhythm that keeps the
+                                annual position clean.</p>
+                            <ul class="calendar__list">
+                                <li><span class="mono">Day 07</span><span>TDS &amp; TCS
+                                        deposit</span><span>Deposit</span></li>
+                                <li><span class="mono">Day 11</span><span>GSTR-1 outward
+                                        supplies</span><span>Return</span></li>
+                                <li><span class="mono">Day 20</span><span>GSTR-3B summary
+                                        return</span><span>Return</span></li>
+                                <li><span class="mono">Day 25</span><span>Ledger vs. bank
+                                        reconciliation</span><span>Internal</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="calendar__panel" id="cycle-quarterly" role="tabpanel">
+                            <h3>Quarterly cycle</h3>
+                            <p>Advance tax calibration and review checkpoints, where estimates meet actuals.</p>
+                            <ul class="calendar__list">
+                                <li><span class="mono">Jun 15</span><span>First advance tax
+                                        instalment</span><span>Payment</span></li>
+                                <li><span class="mono">Sep 15</span><span>Second advance tax
+                                        instalment</span><span>Payment</span></li>
+                                <li><span class="mono">Dec 15</span><span>Third advance tax
+                                        instalment</span><span>Payment</span></li>
+                                <li><span class="mono">Mar 15</span><span>Fourth instalment &amp; year-end
+                                        review</span><span>Payment</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="calendar__panel" id="cycle-annual" role="tabpanel">
+                            <h3>Annual cycle</h3>
+                            <p>Return filing, audit completion and the documentation set that supports both.</p>
+                            <ul class="calendar__list">
+                                <li><span class="mono">Jul 31</span><span>Income tax return —
+                                        non-audit</span><span>Return</span></li>
+                                <li><span class="mono">Sep 30</span><span>Tax audit report</span><span>Audit</span></li>
+                                <li><span class="mono">Oct 31</span><span>Income tax return — audit
+                                        cases</span><span>Return</span></li>
+                                <li><span class="mono">Nov 30</span><span>Transfer pricing
+                                        documentation</span><span>Documentation</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="calendar__panel" id="cycle-event" role="tabpanel">
+                            <h3>Event-driven</h3>
+                            <p>Filings triggered by a transaction, a notice or a structural change.</p>
+                            <ul class="calendar__list">
+                                <li><span class="mono">Notice</span><span>Assessment or query
+                                        response</span><span>Reply</span></li>
+                                <li><span class="mono">Restructure</span><span>Entity change &amp; fresh
+                                        registration</span><span>Filing</span></li>
+                                <li><span class="mono">Transaction</span><span>Withholding on cross-border
+                                        payment</span><span>Deposit</span></li>
+                                <li><span class="mono">Closure</span><span>Final return &amp;
+                                        reconciliation</span><span>Return</span></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= ENGAGEMENT METHOD ======================= -->
+        <section class="section method">
+            <div class="shell method__grid">
+
+                <div>
+                    <p class="eyebrow slide slide-up">Engagement Method</p>
+                    <h2 class="h-display slide slide-up" style="--i:1">
+                        Four movements,<br>in the same order,<br>every time.
+                    </h2>
+                    <p class="slide slide-up" style="--i:2;margin-top:1.5rem">
+                        The sequence is deliberately fixed. It is what makes the output
+                        predictable, reviewable and defensible.
+                    </p>
+                </div>
+
+                <ol class="stepper">
+                    <li class="slide slide-right" style="--i:1">
+                        <span class="stepper__idx">Intake</span>
+                        <div class="stepper__body">
+                            <h3>Read what exists</h3>
+                            <p>Prior filings, ledgers, notices and correspondence are collected and indexed before any
+                                position is formed.</p>
+                            <span>Deliverable · Document index</span>
+                        </div>
+                    </li>
+                    <li class="slide slide-right" style="--i:2">
+                        <span class="stepper__idx">Position</span>
+                        <div class="stepper__body">
+                            <h3>State the argument in writing</h3>
+                            <p>Each position is reduced to a short note: the facts, the provision, the reasoning and the
+                                residual risk.</p>
+                            <span>Deliverable · Position note</span>
+                        </div>
+                    </li>
+                    <li class="slide slide-right" style="--i:3">
+                        <span class="stepper__idx">Execution</span>
+                        <div class="stepper__body">
+                            <h3>File, deposit, respond</h3>
+                            <p>Returns are prepared and filed against the agreed position, with the working papers
+                                assembled alongside.</p>
+                            <span>Deliverable · Filed set</span>
+                        </div>
+                    </li>
+                    <li class="slide slide-right" style="--i:4">
+                        <span class="stepper__idx">Review</span>
+                        <div class="stepper__body">
+                            <h3>Test it against a cold read</h3>
+                            <p>A second advisor reviews the file as though seeing it for the first time, and records
+                                what would need answering.</p>
+                            <span>Deliverable · Review memo</span>
+                        </div>
+                    </li>
+                </ol>
+
+            </div>
+        </section>
+
+        <!-- ====================== PRACTICE IN NUMBERS ====================== -->
+        <section class="section numbers">
+            <div class="shell">
+                <header class="sec-head">
+                    <p class="eyebrow slide slide-up">Practice in Numbers</p>
+                    <h2 class="h-display slide slide-up" style="--i:1">A measured record.</h2>
+                    <p class="sec-head__note slide slide-up" style="--i:2">
+                        Figures below describe the composition of our work, not outcomes promised
+                        to any client.
+                    </p>
+                </header>
+
+                <div class="numbers__grid">
+
+                    <div class="stat slide slide-up" style="--i:1">
+                        <span class="stat__value" data-count="14" data-suffix="">0</span>
+                        <span class="stat__label">Years in practice</span>
+                        <p class="stat__note">Continuous advisory work since inception.</p>
+                    </div>
+
+                    <div class="stat slide slide-up" style="--i:2">
+                        <span class="stat__value" data-count="5" data-suffix="">0</span>
+                        <span class="stat__label">Advisory desks</span>
+                        <p class="stat__note">Direct tax, GST, audit, structuring, regulatory.</p>
+                    </div>
+
+                    <div class="stat slide slide-up" style="--i:3">
+                        <span class="stat__value" data-count="240" data-suffix="+">0</span>
+                        <span class="stat__label">Filings per cycle</span>
+                        <p class="stat__note">Across individual and business engagements.</p>
+                    </div>
+
+                    <div class="stat slide slide-up" style="--i:4">
+                        <span class="stat__value" data-count="96" data-suffix="%">0</span>
+                        <span class="stat__label">Filed before deadline</span>
+                        <p class="stat__note">Internal target; exceptions are logged and reviewed.</p>
+                    </div>
+
+                    <div class="stat stat--gauge slide slide-left" style="--i:1">
+                        <div class="gauge" data-gauge="82">
+                            <svg viewBox="0 0 120 120" width="100%" height="100%" aria-hidden="true">
+                                <circle class="gauge__track" cx="60" cy="60" r="52" fill="none" stroke-width="8">
+                                </circle>
+                                <circle class="gauge__bar" cx="60" cy="60" r="52" fill="none" stroke-width="8"
+                                    stroke-dasharray="326.7" stroke-dashoffset="326.7"></circle>
+                            </svg>
+                            <span class="gauge__value">0%</span>
+                        </div>
+                        <div>
+                            <span class="stat__label">Documentation completeness</span>
+                            <p class="stat__note">
+                                Share of active files holding a complete, indexed working-paper set
+                                at the point of filing. Self-assessed, reviewed quarterly.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="stat stat--bars slide slide-right" style="--i:2">
+                        <span class="stat__label">Composition of engagements</span>
+                        <div class="bars">
+                            <div class="bars__row">
+                                <span class="bars__label">Direct Tax</span>
+                                <span class="bars__track"><span class="bars__fill" data-bar="78"></span></span>
+                                <span class="bars__val">78</span>
+                            </div>
+                            <div class="bars__row">
+                                <span class="bars__label">GST</span>
+                                <span class="bars__track"><span class="bars__fill" data-bar="64"></span></span>
+                                <span class="bars__val">64</span>
+                            </div>
+                            <div class="bars__row">
+                                <span class="bars__label">Audit</span>
+                                <span class="bars__track"><span class="bars__fill" data-bar="52"></span></span>
+                                <span class="bars__val">52</span>
+                            </div>
+                            <div class="bars__row">
+                                <span class="bars__label">Structuring</span>
+                                <span class="bars__track"><span class="bars__fill" data-bar="41"></span></span>
+                                <span class="bars__val">41</span>
+                            </div>
+                            <div class="bars__row">
+                                <span class="bars__label">Regulatory</span>
+                                <span class="bars__track"><span class="bars__fill" data-bar="37"></span></span>
+                                <span class="bars__val">37</span>
+                            </div>
+                        </div>
+                        <p class="note" style="margin-top:1.15rem">Illustrative composition. Indicative index, not a
+                            client count.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================== SPECIALISATIONS ======================== -->
+        <section class="section spec">
+            <div class="shell">
+                <header class="sec-head">
+                    <p class="eyebrow slide slide-up">Specialisations</p>
+                    <h2 class="h-display slide slide-up" style="--i:1">Narrow desks, deep files.</h2>
+                    <p class="sec-head__note slide slide-up" style="--i:2">
+                        Areas where the practice maintains standing documentation, precedents
+                        and a named lead.
+                    </p>
+                </header>
+            </div>
+
+            <div class="shell">
+                <div class="spec__rail slide slide-up" style="--i:3" tabindex="0"
+                    aria-label="Specialisations, scrollable">
+
+                    <article class="spec__card">
+                        <span class="spec__idx">01</span>
+                        <h3>Cross-border withholding</h3>
+                        <p>Treaty position, characterisation of payments and the documentation that supports a lower
+                            rate.</p>
+                        <a class="link-arrow" href="404.html">Read the note <i class="fa-solid fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="spec__card">
+                        <span class="spec__idx">02</span>
+                        <h3>Transfer pricing files</h3>
+                        <p>Benchmarking studies, local files and the reconciliation between the study and the ledger.
+                        </p>
+                        <a class="link-arrow" href="404.html">Read the note <i class="fa-solid fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="spec__card">
+                        <span class="spec__idx">03</span>
+                        <h3>Refund recovery</h3>
+                        <p>Refund claims, follow-through and the evidence trail that shortens the wait.</p>
+                        <a class="link-arrow" href="404.html">Read the note <i class="fa-solid fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="spec__card">
+                        <span class="spec__idx">04</span>
+                        <h3>Succession planning</h3>
+                        <p>Family arrangements, holding structures and the tax consequences of each step.</p>
+                        <a class="link-arrow" href="404.html">Read the note <i class="fa-solid fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="spec__card">
+                        <span class="spec__idx">05</span>
+                        <h3>Assessment defence</h3>
+                        <p>Notice response, submission drafting and representation through to appeal.</p>
+                        <a class="link-arrow" href="404.html">Read the note <i class="fa-solid fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="spec__card">
+                        <span class="spec__idx">06</span>
+                        <h3>Indirect tax reviews</h3>
+                        <p>Classification, place of supply and input credit reconciliations across a full year.</p>
+                        <a class="link-arrow" href="404.html">Read the note <i class="fa-solid fa-arrow-right"></i></a>
+                    </article>
+
+                </div>
+
+                <p class="spec__hint mono">Scroll horizontally to review all desks</p>
+            </div>
+        </section>
+
+        <!-- ====================== CLIENT PERSPECTIVES ====================== -->
+        <section class="perspectives">
+            <div class="shell">
+                <header class="sec-head">
+                    <p class="eyebrow slide slide-up">Client Perspectives</p>
+                    <h2 class="h-section slide slide-up" style="--i:1">What the working relationship feels like.</h2>
+                    <p class="sec-head__note slide slide-up" style="--i:2">
+                        The statements below are illustrative placeholders written for layout
+                        demonstration. They are not real client testimonials.
+                    </p>
+                </header>
+            </div>
+
+            <div class="persp__marquee">
+                <div class="persp__track">
+                    <div class="persp__group">
+
+                        <article class="persp__card">
+                            <blockquote>
+                                “The file arrived indexed. I had never seen a prior year explained
+                                that plainly in one place.”
+                            </blockquote>
+                            <p class="persp__who">Placeholder · Finance lead, manufacturing</p>
+                        </article>
+
+                        <article class="persp__card">
+                            <blockquote>
+                                “They told us what the position could not survive, before telling us
+                                what it could save.”
+                            </blockquote>
+                            <p class="persp__who">Placeholder · Founder, services company</p>
+                        </article>
+
+                        <article class="persp__card">
+                            <blockquote>
+                                “Deadlines stopped being something we tracked. They became something
+                                the practice owned.”
+                            </blockquote>
+                            <p class="persp__who">Placeholder · Controller, distribution group</p>
+                        </article>
+
+                        <article class="persp__card">
+                            <blockquote>
+                                “Every number in the submission traced back to a document. That is
+                                the whole value.”
+                            </blockquote>
+                            <p class="persp__who">Placeholder · Director, family business</p>
+                        </article>
+
+                    </div>
+
+                    <div class="persp__group" aria-hidden="true">
+
+                        <article class="persp__card">
+                            <blockquote>
+                                “The file arrived indexed. I had never seen a prior year explained
+                                that plainly in one place.”
+                            </blockquote>
+                            <p class="persp__who">Placeholder · Finance lead, manufacturing</p>
+                        </article>
+
+                        <article class="persp__card">
+                            <blockquote>
+                                “They told us what the position could not survive, before telling us
+                                what it could save.”
+                            </blockquote>
+                            <p class="persp__who">Placeholder · Founder, services company</p>
+                        </article>
+
+                        <article class="persp__card">
+                            <blockquote>
+                                “Deadlines stopped being something we tracked. They became something
+                                the practice owned.”
+                            </blockquote>
+                            <p class="persp__who">Placeholder · Controller, distribution group</p>
+                        </article>
+
+                        <article class="persp__card">
+                            <blockquote>
+                                “Every number in the submission traced back to a document. That is
+                                the whole value.”
+                            </blockquote>
+                            <p class="persp__who">Placeholder · Director, family business</p>
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================== TAX INSIGHTS JOURNAL ===================== -->
+        <section class="section">
+            <div class="shell">
+                <header class="sec-head">
+                    <p class="eyebrow slide slide-up">Tax Insights Journal</p>
+                    <h2 class="h-display slide slide-up" style="--i:1">Notes from the desks.</h2>
+                    <p class="sec-head__note slide slide-up" style="--i:2">
+                        Short, practical writing on provisions, procedure and the documentation
+                        that holds a position together.
+                    </p>
+                </header>
+
+                <div class="journal__masonry">
+
+                    <article class="journal__item slide slide-up" style="--i:1">
+                        <figure>
+                            <img src="assets/photo_1554224155-8.webp"
+                                alt="Calculator and printed tax schedules on a wooden desk">
+                        </figure>
+                        <div class="journal__body">
+                            <p class="journal__meta"><span>Direct Tax</span><span>·</span><span>8 min read</span></p>
+                            <h3>Advance tax is a forecasting discipline, not a payment</h3>
+                            <p>Why the third instalment is the one that decides whether March is calm or expensive.</p>
+                            <a class="link-arrow" href="404.html">Read the full note <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="journal__item slide slide-up" style="--i:2">
+                        <figure>
+                            <img src="assets/photo_1556761175.webp"
+                                alt="Two people reviewing documents across a table in an office">
+                        </figure>
+                        <div class="journal__body">
+                            <p class="journal__meta"><span>GST</span><span>·</span><span>6 min read</span></p>
+                            <h3>Reconciliation is not a year-end task</h3>
+                            <p>A monthly ledger-to-return check removes most of the questions asked in a departmental
+                                reply.</p>
+                            <a class="link-arrow" href="404.html">Read the full note <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="journal__item slide slide-up" style="--i:3">
+                        <figure>
+                            <img src="assets/photo_145010149916_3.webp"
+                                alt="Pen resting on a printed statement with handwritten annotations">
+                        </figure>
+                        <div class="journal__body">
+                            <p class="journal__meta"><span>Audit</span><span>·</span><span>10 min read</span></p>
+                            <h3>What a working paper actually has to prove</h3>
+                            <p>Not that the number is right — that the path to the number is reproducible by someone
+                                else.</p>
+                            <a class="link-arrow" href="404.html">Read the full note <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="journal__item slide slide-up" style="--i:4">
+                        <figure>
+                            <img src="assets/photo_1454165804606.webp"
+                                alt="Meeting table with laptops and printed reports">
+                        </figure>
+                        <div class="journal__body">
+                            <p class="journal__meta"><span>Structuring</span><span>·</span><span>7 min read</span></p>
+                            <h3>Entity choice should be tested against the exit</h3>
+                            <p>Structures are usually selected on entry conditions and judged on exit ones.</p>
+                            <a class="link-arrow" href="404.html">Read the full note <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="journal__item slide slide-up" style="--i:5">
+                        <figure>
+                            <img src="assets/photo_1497215728101.webp"
+                                alt="Stacked binders and folders on an office shelf">
+                        </figure>
+                        <div class="journal__body">
+                            <p class="journal__meta"><span>Regulatory</span><span>·</span><span>5 min read</span></p>
+                            <h3>The filing calendar as a control, not a reminder</h3>
+                            <p>A dated register with named owners catches more than a shared spreadsheet ever will.</p>
+                            <a class="link-arrow" href="404.html">Read the full note <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="journal__item slide slide-up" style="--i:6">
+                        <figure>
+                            <img src="assets/photo_1554200876.webp"
+                                alt="Calculator, pen and printed financial columns on a desk">
+                        </figure>
+                        <div class="journal__body">
+                            <p class="journal__meta"><span>Documentation</span><span>·</span><span>9 min read</span></p>
+                            <h3>Writing a position note someone can review cold</h3>
+                            <p>Facts, provision, reasoning, residual risk — in that order, every time.</p>
+                            <a class="link-arrow" href="404.html">Read the full note <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+     
+
+        <!-- ========================= OFFICE GALLERY ======================== -->
+        <section class="section">
+            <div class="shell">
+                <header class="sec-head">
+                    <p class="eyebrow slide slide-up">Office &amp; Facilities</p>
+                    <h2 class="h-display slide slide-up" style="--i:1">Where the files live.</h2>
+                    <p class="sec-head__note slide slide-up" style="--i:2">
+                        Reading rooms, archive shelving and the review desks where second reads
+                        happen.
+                    </p>
+                </header>
+
+                <div class="gallery__grid">
+
+                    <a href="404.html" class="gallery__cell gallery__cell--a slide slide-left">
+                        <img src="assets/photo_149736681135_1.webp"
+                            alt="Advisory office interior with desks, chairs and natural light">
+                        <figcaption>Advisory floor</figcaption>
+                    </a>
+
+                    <a href="404.html" class="gallery__cell gallery__cell--b slide slide-right" style="--i:1">
+                        <img src="assets/photo_149736675403.webp"
+                            alt="Meeting room with a long table and document folders">
+                        <figcaption>Review room</figcaption>
+                    </a>
+
+                    <a href="404.html" class="gallery__cell gallery__cell--c slide slide-up" style="--i:2">
+                        <img src="assets/photo_151704867673.webp"
+                            alt="Shelves of labelled binders and archive boxes" style="object-position: center;">
+                        <figcaption>Archive shelving</figcaption>
+                    </a>
+
+                    <a href="404.html" class="gallery__cell gallery__cell--d slide slide-up" style="--i:3">
+                        <img src="assets/photo_149721572810.webp"
+                            alt="Advisors in discussion around a table with printed material" style="object-position: center;">
+                        <figcaption>Second read</figcaption>
+                    </a>
+
+                    <a href="404.html" class="gallery__cell gallery__cell--e slide slide-up" style="--i:4">
+                        <img src="assets/photo_149721572810_2.webp"
+                            alt="Open-plan workspace with rows of desks and screens">
+                        <figcaption>Filing desk</figcaption>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================== CTA ============================== -->
+        <section class="cta">
+            <div class="shell cta__grid">
+
+                <div class="cta__body">
+                    <p class="eyebrow slide slide-up">Start an Engagement</p>
+                    <h2 class="slide slide-up" style="--i:1">Bring us the year that has not been explained yet.</h2>
+                    <p class="slide slide-up" style="--i:2">
+                        A first conversation is a review, not a pitch. Send the structure, the
+                        deadlines and the open questions — we will tell you what we would need
+                        to see before forming a view.
+                    </p>
+
+                    <div class="cta__actions slide slide-up" style="--i:3">
+                        <a class="btn btn--paper" href="html/contact.html">Request a Consultation</a>
+                        <a class="btn btn--ghost-paper" href="html/services.html">Review Advisory Services</a>
+                    </div>
+
+  
+                </div>
+
+                <figure class="cta__figure slide slide-right" style="--i:1">
+                    <img src="assets/photo_152475863162_1.webp"
+                        alt="Advisors reviewing printed schedules and notes at a table">
+                    <figcaption>Consultation room · Salem</figcaption>
+                </figure>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================ FOOTER ============================ -->
+    <footer class="site-footer">
+        <div class="shell">
+
+            <div class="footer__grid">
+
+                <div class="footer__brand">
+                    <a class="brand on-dark" href="index.html" aria-label="Stackly Tax Advisory — home">
+                        <img src="logo.webp" alt="">
+                        
+                    </a>
+                    <p>
+                        A tax advisory and financial compliance practice working on direct tax,
+                        indirect tax, audit, structuring and regulatory filings.
+                    </p>
+                    <div class="footer__social">
+                        <a href="404.html" aria-label="Stackly on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="404.html" aria-label="Stackly on X"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="404.html" aria-label="Stackly on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="404.html" aria-label="Stackly on YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer__col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="html/about.html">About</a></li>
+                        <li><a href="html/services.html">Services</a></li>
+                        <li><a href="html/blog.html">Blog</a></li>
+                        <li><a href="html/contact.html">Contact</a></li>
+                        <li><a href="html/login.html">Login</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h4>Practice Areas</h4>
+                    <ul>
+                        <li><a href="404.html">Direct Tax</a></li>
+                        <li><a href="404.html">GST &amp; Indirect Tax</a></li>
+                        <li><a href="404.html">Audit &amp; Assurance</a></li>
+                        <li><a href="404.html">Planning &amp; Structuring</a></li>
+                        <li><a href="404.html">Regulatory &amp; Compliance</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="404.html">Filing Calendar</a></li>
+                        <li><a href="404.html">Document Checklists</a></li>
+                        <li><a href="404.html">Engagement Terms</a></li>
+                        <li><a href="404.html">Fee Structure</a></li>
+                        <li><a href="404.html">Editorial Standards</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h4>Contact</h4>
+                    <ul class="footer__contact">
+                        <li><i class="fa-solid fa-phone"></i><span>+91 98765 43210</span></li>
+                        <li><i class="fa-solid fa-envelope"></i><span>stackly@desk.com</span></li>
+                        <li><i class="fa-solid fa-location-dot"></i><span>Stackly, Salem,<br>Tamil Nadu, India</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer__base">
+                <span>© <span id="year">2026</span> Stackly Tax Advisory</span>
+               
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            "use strict";
+
+            var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+            /* ---- 1. Slide motion ---- */
+            var slides = document.querySelectorAll(".slide");
+
+            if (reduceMotion || !("IntersectionObserver" in window)) {
+                slides.forEach(function (el) { el.classList.add("is-in"); });
+            } else {
+                var isMobile = window.matchMedia("(max-width: 900px)").matches;
+                var slideIO = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("is-in");
+                            slideIO.unobserve(entry.target);
+                        }
+                    });
+                }, isMobile
+                    ? { rootMargin: "0px 0px -8% 0px", threshold: 0.08 }
+                    : { rootMargin: "0px 0px -12% 0px", threshold: 0.12 });
+
+                slides.forEach(function (el) { slideIO.observe(el); });
+
+                window.setTimeout(function () {
+                    slides.forEach(function (el) {
+                        var box = el.getBoundingClientRect();
+                        if (box.top < window.innerHeight && box.bottom > 0) {
+                            el.classList.add("is-in");
+                        }
+                    });
+                }, 1400);
+            }
+
+            /* ---- 2. Mobile menu ---- */
+            var menuBtn = document.getElementById("menuBtn");
+            var menuClose = document.getElementById("menuClose");
+            var overlay = document.getElementById("menuOverlay");
+
+            function openMenu() {
+                overlay.classList.add("is-open");
+                overlay.setAttribute("aria-hidden", "false");
+                menuBtn.classList.add("is-open");
+                menuBtn.setAttribute("aria-expanded", "true");
+                menuBtn.setAttribute("aria-label", "Close menu");
+                document.body.classList.add("is-locked");
+                menuClose.focus();
+            }
+
+            function closeMenu() {
+                overlay.classList.remove("is-open");
+                overlay.setAttribute("aria-hidden", "true");
+                menuBtn.classList.remove("is-open");
+                menuBtn.setAttribute("aria-expanded", "false");
+                menuBtn.setAttribute("aria-label", "Open menu");
+                document.body.classList.remove("is-locked");
+            }
+
+            if (menuBtn && overlay && menuClose) {
+                menuBtn.addEventListener("click", function () {
+                    if (overlay.classList.contains("is-open")) closeMenu();
+                    else openMenu();
+                });
+
+                menuClose.addEventListener("click", closeMenu);
+
+                overlay.querySelectorAll("a").forEach(function (link) {
+                    link.addEventListener("click", closeMenu);
+                });
+
+                document.addEventListener("keydown", function (e) {
+                    if (e.key === "Escape" && overlay.classList.contains("is-open")) {
+                        closeMenu();
+                        menuBtn.focus();
+                    }
+                });
+            }
+
+            /* ---- 3. Hero rotation (1.5s) ---- */
+            var heroSlides = document.querySelectorAll(".hero__slide");
+            var heroDots = document.querySelectorAll(".hero__dot");
+            var heroCount = document.getElementById("heroCounter");
+            var heroIndex = 0;
+            var heroTimer = null;
+            var HERO_DELAY = 1500;
+
+            function pad(n) { return n < 10 ? "0" + n : "" + n; }
+
+            function showHero(i) {
+                if (!heroSlides.length) return;
+                heroIndex = (i + heroSlides.length) % heroSlides.length;
+
+                heroSlides.forEach(function (fig, idx) {
+                    fig.classList.toggle("is-active", idx === heroIndex);
+                });
+
+                heroDots.forEach(function (dot, idx) {
+                    var active = idx === heroIndex;
+                    dot.classList.toggle("is-active", active);
+                    dot.setAttribute("aria-selected", active ? "true" : "false");
+                });
+
+                if (heroCount) {
+                    heroCount.textContent = pad(heroIndex + 1) + " / " + pad(heroSlides.length);
+                }
+            }
+
+            function startHero() {
+                if (reduceMotion || heroSlides.length < 2) return;
+                stopHero();
+                heroTimer = window.setInterval(function () {
+                    showHero(heroIndex + 1);
+                }, HERO_DELAY);
+            }
+
+            function stopHero() {
+                if (heroTimer) {
+                    window.clearInterval(heroTimer);
+                    heroTimer = null;
+                }
+            }
+
+            heroDots.forEach(function (dot, idx) {
+                dot.addEventListener("click", function () {
+                    showHero(idx);
+                    startHero();
+                });
+            });
+
+            if (heroSlides.length) {
+                showHero(0);
+                startHero();
+
+                document.addEventListener("visibilitychange", function () {
+                    if (document.hidden) stopHero();
+                    else startHero();
+                });
+            }
+
+            /* ---- 4. Calendar tabs ---- */
+            var tabs = document.querySelectorAll(".calendar__tab");
+
+            tabs.forEach(function (tab) {
+                tab.addEventListener("click", function () {
+                    tabs.forEach(function (t) {
+                        t.classList.remove("is-active");
+                        t.setAttribute("aria-selected", "false");
+                    });
+                    tab.classList.add("is-active");
+                    tab.setAttribute("aria-selected", "true");
+
+                    document.querySelectorAll(".calendar__panel").forEach(function (panel) {
+                        panel.classList.remove("is-active");
+                    });
+
+                    var target = document.getElementById(tab.dataset.tab);
+                    if (target) target.classList.add("is-active");
+                });
+            });
+
+            /* ---- 5. Counters ---- */
+            function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+            function runCounter(el) {
+                var target = parseFloat(el.dataset.count || "0");
+                var suffix = el.dataset.suffix || "";
+                var duration = 1200;
+                var start = null;
+
+                if (reduceMotion) {
+                    el.textContent = target + suffix;
+                    return;
+                }
+
+                function step(now) {
+                    if (start === null) start = now;
+                    var progress = Math.min((now - start) / duration, 1);
+                    el.textContent = Math.round(easeOutCubic(progress) * target) + suffix;
+                    if (progress < 1) window.requestAnimationFrame(step);
+                    else el.textContent = target + suffix;
+                }
+
+                window.requestAnimationFrame(step);
+            }
+
+            /* ---- 6. Gauge + bars ---- */
+            var CIRC = 2 * Math.PI * 52;
+
+            function runGauge(wrap) {
+                var pct = parseFloat(wrap.dataset.gauge || "0");
+                var bar = wrap.querySelector(".gauge__bar");
+                var text = wrap.querySelector(".gauge__value");
+                if (!bar || !text) return;
+
+                bar.style.strokeDasharray = CIRC.toFixed(1);
+                bar.style.strokeDashoffset = reduceMotion
+                    ? (CIRC * (1 - pct / 100)).toFixed(1)
+                    : CIRC.toFixed(1);
+
+                if (reduceMotion) {
+                    text.textContent = pct + "%";
+                    return;
+                }
+
+                window.requestAnimationFrame(function () {
+                    bar.style.strokeDashoffset = (CIRC * (1 - pct / 100)).toFixed(1);
+                });
+
+                var duration = 1400;
+                var start = null;
+
+                function step(now) {
+                    if (start === null) start = now;
+                    var progress = Math.min((now - start) / duration, 1);
+                    text.textContent = Math.round(easeOutCubic(progress) * pct) + "%";
+                    if (progress < 1) window.requestAnimationFrame(step);
+                    else text.textContent = pct + "%";
+                }
+
+                window.requestAnimationFrame(step);
+            }
+
+            function runBars(scope) {
+                scope.querySelectorAll(".bars__fill").forEach(function (fill) {
+                    var value = parseFloat(fill.dataset.bar || "0");
+                    fill.style.transform = "scaleX(" + (value / 100) + ")";
+                    fill.classList.add("is-in");
+                });
+            }
+
+            /* ---- 7. One-shot observer ---- */
+            if ("IntersectionObserver" in window) {
+                var dataIO = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (!entry.isIntersecting) return;
+                        var el = entry.target;
+                        if (el.hasAttribute("data-count")) runCounter(el);
+                        if (el.hasAttribute("data-gauge")) runGauge(el);
+                        if (el.classList.contains("stat--bars")) runBars(el);
+                        dataIO.unobserve(el);
+                    });
+                }, { rootMargin: "0px 0px -10% 0px", threshold: 0.15 });
+
+                document.querySelectorAll("[data-count], [data-gauge], .stat--bars").forEach(function (el) {
+                    dataIO.observe(el);
+                });
+            } else {
+                document.querySelectorAll("[data-count]").forEach(function (el) {
+                    el.textContent = el.dataset.count + (el.dataset.suffix || "");
+                });
+                document.querySelectorAll("[data-gauge]").forEach(function (el) {
+                    var pct = parseFloat(el.dataset.gauge || "0");
+                    var text = el.querySelector(".gauge__value");
+                    if (text) text.textContent = pct + "%";
+                    var bar = el.querySelector(".gauge__bar");
+                    if (bar) {
+                        bar.style.strokeDasharray = CIRC.toFixed(1);
+                        bar.style.strokeDashoffset = (CIRC * (1 - pct / 100)).toFixed(1);
+                    }
+                });
+                document.querySelectorAll(".stat--bars").forEach(runBars);
+            }
+
+            /* ---- 8. Rail keyboard ---- */
+            var rail = document.querySelector(".spec__rail");
+            if (rail) {
+                rail.addEventListener("keydown", function (e) {
+                    if (e.key === "ArrowRight") {
+                        rail.scrollBy({ left: 320, behavior: reduceMotion ? "auto" : "smooth" });
+                        e.preventDefault();
+                    }
+                    if (e.key === "ArrowLeft") {
+                        rail.scrollBy({ left: -320, behavior: reduceMotion ? "auto" : "smooth" });
+                        e.preventDefault();
+                    }
+                });
+            }
+
+            /* ---- 9. Footer year ---- */
+            var yearEl = document.getElementById("year");
+            if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+        })();
+    </script>
+
+</body>
+
+</html>

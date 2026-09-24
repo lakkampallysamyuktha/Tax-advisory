@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page not found — Stackly Tax Advisory</title>
+    <meta name="description" content="The page you requested is not in the register.">
+    <meta name="robots" content="noindex">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="global.css">
+
+    <style>
+        /* ============================================================
+   404 — page-specific styles (no separate CSS file per spec)
+   ============================================================ */
+
+        .err-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: clamp(2rem, 5vw, 4rem) clamp(1.25rem, 4vw, 3rem);
+            background: var(--paper);
+            color: var(--ink-900);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        /* Subtle register backdrop */
+        .err-page::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(13, 28, 66, .055) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(13, 28, 66, .055) 1px, transparent 1px);
+            background-size: 64px 64px;
+            mask-image: radial-gradient(circle at 50% 42%, #000 0%, transparent 74%);
+            -webkit-mask-image: radial-gradient(circle at 50% 42%, #000 0%, transparent 74%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .err {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 720px;
+            margin-inline: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: clamp(2.5rem, 5vw, 3.75rem);
+        }
+
+        /* ------------------------------ LOGO ------------------------------ */
+        .err__brand {
+            display: inline-flex;
+            align-items: center;
+            gap: .85rem;
+        }
+
+        .err__brand img {
+            width: 140px;
+            height: 38px;
+            object-fit: contain;
+            filter: brightness(0) saturate(100%) invert(14%) sepia(43%) saturate(1743%) hue-rotate(202deg) brightness(94%) contrast(92%) !important;
+        }
+
+        .err__brand .brand__name {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            line-height: 1.05;
+            letter-spacing: -.01em;
+            color: var(--ink-900);
+        }
+
+        .err__brand .brand__name em {
+            font-family: var(--font-mono);
+            font-style: normal;
+            font-size: .5625rem;
+            letter-spacing: .22em;
+            text-transform: uppercase;
+            color: var(--navy-400);
+            margin-top: .3rem;
+        }
+
+        /* ------------------------------ BODY ------------------------------ */
+        .err__body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .err__code {
+            font-family: var(--font-display);
+            font-size: clamp(5.5rem, 20vw, 12rem);
+            line-height: .9;
+            letter-spacing: -.05em;
+            font-variant-numeric: tabular-nums;
+            color: var(--ink-900);
+            font-variation-settings: "opsz" 144;
+        }
+
+        .err__code span {
+            color: var(--navy-600);
+            font-style: italic;
+        }
+
+        .err__title {
+            font-family: var(--font-display);
+            font-size: clamp(1.6rem, 3.4vw, 2.5rem);
+            line-height: 1.14;
+            letter-spacing: -.022em;
+            max-width: 20ch;
+            color: var(--ink-900);
+        }
+
+        .err__title em {
+            font-style: italic;
+            color: var(--navy-600);
+        }
+
+        .err__lede {
+            font-size: clamp(1rem, 1.3vw, 1.08rem);
+            line-height: 1.68;
+            color: var(--navy-800);
+            max-width: 52ch;
+        }
+
+        .err__ref {
+            display: inline-flex;
+            align-items: center;
+            gap: .7rem;
+            padding: .7rem 1.1rem;
+            border: 1px solid var(--rule);
+            font-family: var(--font-mono);
+            font-size: .625rem;
+            letter-spacing: .22em;
+            text-transform: uppercase;
+            color: var(--navy-400);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .err__ref::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            background: var(--navy-600);
+            flex: none;
+        }
+
+        /* ---------------------------- ACTIONS ----------------------------- */
+        .err__actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .85rem;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .err__btn {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: .75rem;
+            min-height: 52px;
+            padding: .95rem 2rem;
+            font-family: var(--font-mono);
+            font-size: .6875rem;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            border: 1px solid transparent;
+            transition: background-color .4s var(--ease-out),
+                color .4s var(--ease-out),
+                border-color .4s var(--ease-out),
+                transform .5s var(--ease-out);
+        }
+
+        .err__btn i {
+            font-size: .72rem;
+            transition: transform .45s var(--ease-out);
+        }
+
+        /* Home — arrow moves right, button drifts right */
+        .err__btn--home {
+            background: var(--navy-600);
+            color: var(--paper);
+            border-color: var(--navy-600);
+        }
+
+        .err__btn--home:hover {
+            background: var(--ink-900);
+            border-color: var(--ink-900);
+            transform: translateX(4px);
+        }
+
+        .err__btn--home:hover i {
+            transform: translateX(7px);
+        }
+
+        /* Back — arrow moves left, button drifts left (opposite direction) */
+        .err__btn--back {
+            background: transparent;
+            color: var(--navy-600);
+            border-color: var(--navy-600);
+        }
+
+        .err__btn--back:hover {
+            background: var(--navy-600);
+            color: var(--paper);
+            transform: translateX(-4px);
+        }
+
+        .err__btn--back:hover i {
+            transform: translateX(-7px);
+        }
+
+        .err__btn:focus-visible {
+            outline: 2px solid var(--navy-600);
+            outline-offset: 4px;
+        }
+
+        /* ---------------------------- FOOTNOTE ---------------------------- */
+        .err__foot {
+            font-family: var(--font-mono);
+            font-size: .5625rem;
+            letter-spacing: .22em;
+            text-transform: uppercase;
+            color: var(--navy-400);
+            line-height: 1.7;
+        }
+
+        /* --------------------------- BREAKPOINTS -------------------------- */
+        @media (max-width: 600px) {
+            .err__actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .err__btn {
+                width: 100%;
+            }
+
+            .err__code {
+                font-size: clamp(4.5rem, 30vw, 7rem);
+            }
+        }
+
+        /* ------------------------ REDUCED MOTION -------------------------- */
+        @media (prefers-reduced-motion: reduce) {
+
+            .err__btn,
+            .err__btn i {
+                transition: none !important;
+                transform: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="err-page">
+
+    <main class="err">
+
+        <!-- Logo -->
+        <a class="err__brand" href="index.html" aria-label="Stackly Tax Advisory — home">
+            <img src="logo.webp" alt="">
+            
+        </a>
+
+        <!-- Content -->
+        <div class="err__body">
+            <p class="err__code" aria-hidden="true">4<span>0</span>4</p>
+
+            <h1 class="err__title">
+                This page is not <em>in the register.</em>
+            </h1>
+
+            <p class="err__lede">
+                The address you followed does not resolve to a document we hold. It may
+                have been moved, renamed, or it may never have existed. Nothing has been
+                logged against your session.
+            </p>
+
+            <span class="err__ref">Reference · STK/ERR/404</span>
+        </div>
+
+        <!-- Actions -->
+        <div class="err__actions">
+            <a class="err__btn err__btn--home" href="index.html">
+                Back to Home <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+            <button class="err__btn err__btn--back" id="goBack" type="button">
+                <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Go Back
+            </button>
+        </div>
+
+        <p class="err__foot">Stackly Tax Advisory · Salem · Tamil Nadu</p>
+
+    </main>
+
+    <script>
+        (function () {
+            "use strict";
+
+            var backBtn = document.getElementById("goBack");
+
+            if (backBtn) {
+                backBtn.addEventListener("click", function () {
+                    var hasHistory = window.history.length > 1;
+                    var hasReferrer = document.referrer && document.referrer !== "";
+
+                    /* Only step back if we actually have somewhere to step back to,
+                       and it did not come from another origin. Otherwise fall back
+                       to the home page. */
+                    if (hasHistory && hasReferrer) {
+                        try {
+                            window.history.back();
+                        } catch (err) {
+                            window.location.href = "index.html";
+                        }
+                    } else {
+                        window.location.href = "index.html";
+                    }
+                });
+            }
+
+        })();
+    </script>
+
+</body>
+
+</html>
